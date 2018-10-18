@@ -35,7 +35,7 @@ delay = 0.0005
 fw = front_wheels.Front_Wheels(db='config')
 bw = back_wheels.Back_Wheels(db='config')
 lf = Line_Follower.Line_Follower()
-ua = Ultrasonic_Avoidance.Ultrasonic_Avoidance(D0)
+ua = Ultrasonic_Avoidance.Ultrasonic_Avoidance(20)
 
 lf.references = REFERENCES
 fw.ready()
