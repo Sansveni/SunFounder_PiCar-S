@@ -12,10 +12,12 @@
 '''
 
 from SunFounder_Line_Follower import Line_Follower
+from SunFounder_Ultrasonic_Avoidance import Ultrasonic_Avoidance
 from picar import front_wheels
 from picar import back_wheels
 import time
 import picar
+import random
 
 picar.setup()
 
