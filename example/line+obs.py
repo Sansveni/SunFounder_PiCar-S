@@ -27,6 +27,8 @@ calibrate = False
 forward_speed = 80
 backward_speed = 70
 turning_angle = 40
+back_distance = 10
+turn_distance = 20
 
 max_off_track_count = 40
 
