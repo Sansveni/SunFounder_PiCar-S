@@ -55,12 +55,12 @@ while True:
 		lastCommand = timer()
 	elif uinput=='d':
 		if(angle < 180):
-			angle++
+			angle+=1
 		fw.turn(angle)
 		lastCommand = timer()
 	elif uinput=='a':
 		if(angle>0):
-			angle--
+			angle-=1
 		fw.turn(angle)
 		lastCommand = timer()
 
