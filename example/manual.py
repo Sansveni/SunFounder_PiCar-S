@@ -38,7 +38,9 @@ forward_speed = 70
 backward_speed = 70
 lastCommand = 0
 current = 0
-turn_angle = 0
+turn_angle = 0 
+going_forward = False;
+going_backward = False;
 while True:
 	uinput =getch();
 	current = timer()
@@ -46,12 +48,20 @@ while True:
 	if uinput=='q':
 		exit()
 	elif uinput=='w':
-		bw.forward()
-		bw.speed = forward_speed
+		if going_backward:
+			bw.stop()
+			going_backward = False;
+		else:
+			bw.forward()
+			bw.speed = forward_speed
 		lastCommand = timer()
 	elif uinput=='s':
-		bw.backward()
-		bw.speed = backward_speed
+		if going_forward:
+			bw.stop()
+			going_forward = False;
+		else:
+			bw.backward()
+			bw.speed = backward_speed
 		lastCommand = timer()
 	elif uinput=='d':
 #		if(turn_angle < 180):
