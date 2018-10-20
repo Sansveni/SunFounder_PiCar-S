@@ -47,4 +47,4 @@ while True:
 	else:
 		bw.stop()
 	time.sleep(.01)
-	bw.stop()w
+	bw.stop()
