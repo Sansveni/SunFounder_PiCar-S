@@ -53,5 +53,4 @@ while True:
 		lastCommand = timer()
 	else:
 		print "Unrecognized command.\n"
-	time.sleep(.01)
-	bw.stop()
+	# 	time.sleep(.01)
