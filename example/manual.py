@@ -38,7 +38,12 @@ def exitFunc():
 	print "Program terminating.  Goodbye!\n"
 	
 
-print "Type q to quit\n"
+print """Welcome to the PiCar Manual Control Program by Charlie Didear\n
+Instructions:\n
+WASD to move. W=forward, S=backward, A=turn left, D=turn right.\
+RF to set speed setting. R=increase speed, F=decrease speed.  Note they do
+ not change direction, only how fast you are going if you're going forward/backward.
+ Q= quit.  NOTE THAT YOU CAN ONLY QUIT BY PRESSING Q."""
 atexit.register(exitFunc)
 
 speed =100
@@ -51,10 +56,7 @@ while True:
 	uinput =getch();
 	uinput=uinput.lower();
 	current = timer()
-	
-
-	print "current: {}".format(current)
-	
+		
 	if uinput=='q':
 		exit()
 		
