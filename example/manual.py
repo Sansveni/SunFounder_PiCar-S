@@ -63,6 +63,7 @@ while True:
 		else:
 			bw.forward()
 			bw.speed = forward_speed
+			going_forward = True
 		lastCommand = timer()
 	elif uinput=='s':
 		if going_forward == True:
@@ -71,6 +72,7 @@ while True:
 		else:
 			bw.backward()
 			bw.speed = backward_speed
+			going_backward = True
 		lastCommand = timer()
 	elif uinput=='d':
 #		if(turn_angle < 180):
@@ -100,4 +102,4 @@ while True:
 		print "Stopping car.\n"
 		bw.stop()
 	
-	time.sleep(1)
+	time.sleep(.1)
