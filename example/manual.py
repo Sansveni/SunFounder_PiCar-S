@@ -39,7 +39,7 @@ while True:
 	uinput =getch();
 	lastCommand = timer()
 	current = timer()
-	if start-current > .1:
+	if lastCommand-current > .1:
 		bw.stop()
 	if uinput=='q':
 		exit()
