@@ -32,8 +32,8 @@ class _GetchUnix:
         return ch
 getch = _GetchUnix()
 
-def exitFunct():
-	bw.stop
+def exitFunc():
+	bw.stop()
 	fw.turn_straight()
 	print "Program terminating.  Goodbye!\n"
 	
@@ -56,7 +56,7 @@ while True:
 	if uinput=='q':
 		exit()
 	elif uinput=='w':
-		if going_backward:
+		if going_backward = True:
 			bw.stop()
 			going_backward = False;
 		else:
@@ -64,7 +64,7 @@ while True:
 			bw.speed = forward_speed
 		lastCommand = timer()
 	elif uinput=='s':
-		if going_forward:
+		if going_forward = True:
 			bw.stop()
 			going_forward = False;
 		else:
