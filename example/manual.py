@@ -6,7 +6,7 @@ from timeit import default_timer as timer
 import time
 import picar
 import random
-
+import atexit
 picar.setup()
 
 fw = front_wheels.Front_Wheels(db='config')
@@ -35,6 +35,7 @@ getch = _GetchUnix()
 def exitFunct():
 	bw.stop
 	fw.turn_straight()
+	print "Program terminating.  Goodbye!\n"
 	
 
 print "Type q to quit\n"
@@ -98,4 +99,4 @@ while True:
 		print "Stopping car.\n"
 		bw.stop()
 	
-	 	time.sleep(.1)
+	time.sleep(.1)
