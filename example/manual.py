@@ -29,12 +29,18 @@ class _GetchUnix:
         return ch
 getch = _GetchUnix()
 
+
+print "Type q to quit\n"
+forward_speed = 70
+backward_speed = 70
+
 while True:
-	print "Type q to quit\n"
 	uinput =getch();
 	if uinput=='q':
 		sys.exit()
 	if uinput=='w':
 		bw.forward()
+		bw.speed = forward_speed
 	if uinput=='s':
 		bw.backward()
+		bw.speed = backward_speed
