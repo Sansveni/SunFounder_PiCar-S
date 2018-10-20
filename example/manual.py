@@ -46,3 +46,5 @@ while True:
 		bw.speed = backward_speed
 	else:
 		bw.stop()
+	time.sleep(.01)
+	bw.stop()w
