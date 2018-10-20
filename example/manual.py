@@ -54,16 +54,14 @@ while True:
 		bw.speed = backward_speed
 		lastCommand = timer()
 	elif uinput=='d':
-#		if(turn_angle < 180):
-#			turn_angle+=1
-#		fw.turn(turn_angle)
-		fw.turn(45)
+		if(turn_angle < 110):
+			turn_angle+=1
+		fw.turn(turn_angle)
 		lastCommand = timer()
 	elif uinput=='a':
-#		if(turn_angle>0):
-#			turn_angle-=1
-#		fw.turn(turn_angle)
-		fw.turn(135)
+		if(turn_angle>70):
+			turn_angle-=1
+		fw.turn(turn_angle)
 		lastCommand = timer()
 
 	else:
