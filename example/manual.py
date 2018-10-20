@@ -40,15 +40,14 @@ def exitFunc():
 
 print "Type q to quit\n"
 atexit.register(exitFunc)
+
+forward_speed = 100
+backward_speed = 70
 lastCommand = 0
 current = 0
 turn_angle = 0 
-speed = 100
 going_forward = False;
 going_backward = False;
-bw.set_speed(speed)
-
-
 while True:
 	uinput =getch();
 	uinput=uinput.lower();
@@ -107,10 +106,8 @@ while True:
 
 	elif uinput =='r':
 		forward_speed+=1
-		print "increasing speed to {}".format(speed)
-		
-	elif uinput =='f':
-		print "decreasing speed to {}".format(speed)
+		print "increasing speed to {}".format(forward_speed)
+
 	else:
 		print "Unrecognized command.\n"
 	
