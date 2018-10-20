@@ -51,10 +51,10 @@ while True:
 		bw.speed = backward_speed
 		lastCommand = timer()
 	elif uinput=='d':
-		fw.turn(0)
+		fw.turn(180)
 		lastCommand = timer()
 	elif uinput=='a':
-		fw.turn(180)
+		fw.turn(0)
 		lastCommand = timer()
 
 	else:
