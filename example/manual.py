@@ -61,7 +61,7 @@ while True:
 	elif uinput=='a':
 		if(turn_angle>0):
 			turn_angle-=1
-		fw.turn(angle)
+		fw.turn(turn_angle)
 		lastCommand = timer()
 
 	else:
