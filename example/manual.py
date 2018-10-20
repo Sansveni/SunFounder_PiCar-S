@@ -37,10 +37,12 @@ backward_speed = 70
 while True:
 	uinput =getch();
 	if uinput=='q':
-		sys.exit()
+		exit()
 	if uinput=='w':
 		bw.forward()
 		bw.speed = forward_speed
 	if uinput=='s':
 		bw.backward()
 		bw.speed = backward_speed
+	else:
+		bw.stop()
