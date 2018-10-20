@@ -32,4 +32,4 @@ getch = _GetchUnix()
 while True:
 	uinput =getch();
 	if uinput=='q':
-		return 0
+		sys.exit()
