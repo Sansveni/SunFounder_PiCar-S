@@ -1,3 +1,5 @@
+#Program written by Charlie Didear.
+#picar libraries were made by Dream at SunFounder.
 from picar import front_wheels
 from picar import back_wheels
 from timeit import default_timer as timer
@@ -36,6 +38,7 @@ forward_speed = 70
 backward_speed = 70
 lastCommand = 0
 current = 0
+turn_angle = 0
 while True:
 	uinput =getch();
 	current = timer()
@@ -51,16 +54,20 @@ while True:
 		bw.speed = backward_speed
 		lastCommand = timer()
 	elif uinput=='d':
-		fw.turn(180)
+		if(angle < 180)
+			angle++
+		fw.turn(angle)
 		lastCommand = timer()
 	elif uinput=='a':
-		fw.turn(0)
+		if(angle>0)
+			angle--
+		fw.turn(angle)
 		lastCommand = timer()
 
 	else:
 		print "Unrecognized command.\n"
 	
-	if current-lastCommand > .1:
+	if current-lastCommand > 0.30:
 		print "Stopping car.\n"
 		bw.stop()
 	
