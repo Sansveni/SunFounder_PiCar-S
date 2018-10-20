@@ -21,14 +21,7 @@ while True:
 #		print "angle: {}".format(x)
 #		fw.turn(x)
 #		time.sleep(.5)
-	fw.turn(0)
-	print "angle is 0.\n"
-	time.sleep(1)
-	fw.turn(90)
-	print "angle is 90.\n"
-	time.sleep(1)
-
-	fw.turn(180)
-	print "angle is 180.\n"
-	time.sleep(1)
-
+	for x in range(0, 180, 45)
+		print "angle: {}".format(x)
+		fw.turn(x)
+		time.sleep(1)
