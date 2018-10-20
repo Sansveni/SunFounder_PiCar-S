@@ -38,10 +38,10 @@ while True:
 	uinput =getch();
 	if uinput=='q':
 		exit()
-	if uinput=='w':
+	elif uinput=='w':
 		bw.forward()
 		bw.speed = forward_speed
-	if uinput=='s':
+	elif uinput=='s':
 		bw.backward()
 		bw.speed = backward_speed
 	else:
