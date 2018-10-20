@@ -30,6 +30,11 @@ class _GetchUnix:
 getch = _GetchUnix()
 
 while True:
+	print "Type q to quit\n"
 	uinput =getch();
 	if uinput=='q':
 		sys.exit()
+	if uinput=='w':
+		bw.forward()
+	if uinput=='s':
+		bw.backward()
