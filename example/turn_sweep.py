@@ -20,4 +20,4 @@ while True:
 	for x in range (180):
 		print "angle: {}".format(x)
 		fw.turn(x)
-		time.sleep(.5)
+		time.sleep(.1)
