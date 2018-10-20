@@ -32,6 +32,10 @@ class _GetchUnix:
         return ch
 getch = _GetchUnix()
 
+def exitFunct():
+	bw.stop
+	fw.turn_straight()
+	
 
 print "Type q to quit\n"
 forward_speed = 70
@@ -44,6 +48,9 @@ going_backward = False;
 while True:
 	uinput =getch();
 	current = timer()
+	atexit.register(exitFunc())
+	
+
 	print "current: {}".format(current)
 	if uinput=='q':
 		exit()
