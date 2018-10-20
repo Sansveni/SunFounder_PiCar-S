@@ -56,7 +56,7 @@ while True:
 	if uinput=='q':
 		exit()
 	elif uinput=='w':
-		if going_backward = True:
+		if going_backward == True:
 			bw.stop()
 			going_backward = False;
 		else:
@@ -64,7 +64,7 @@ while True:
 			bw.speed = forward_speed
 		lastCommand = timer()
 	elif uinput=='s':
-		if going_forward = True:
+		if going_forward == True:
 			bw.stop()
 			going_forward = False;
 		else:
