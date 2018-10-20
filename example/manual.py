@@ -50,7 +50,7 @@ while True:
 		bw.backward()
 		bw.speed = backward_speed
 		lastCommand = timer()
-	elif uinput=="d":
+	elif uinput=='d':
 		fw.turn(1)
 	else:
 		print "Unrecognized command.\n"
