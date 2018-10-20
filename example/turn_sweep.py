@@ -19,5 +19,5 @@ angle = 0
 while True:
 	for x in range (181):
 		print "angle: {}".format(angle)
-		angle = x
+		fw.turn(angle)
 		time.sleep(.5)
