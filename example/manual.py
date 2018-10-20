@@ -54,5 +54,6 @@ while True:
 		print "Unrecognized command.\n"
 	
 	if current-lastCommand > .1:
+		print "Stopping car.\n"
 		bw.stop()
 	# 	time.sleep(.01)
