@@ -37,7 +37,6 @@ backward_speed = 70
 
 while True:
 	uinput =getch();
-	lastCommand = timer()
 	current = timer()
 	if lastCommand-current > .1:
 		bw.stop()
