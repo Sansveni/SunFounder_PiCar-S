@@ -32,4 +32,4 @@ getch = _GetchUnix()
 while True:
 	uinput =getch();
 	if uinput=='q'
-		quit()
+		return 0
