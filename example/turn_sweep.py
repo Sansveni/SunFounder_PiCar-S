@@ -18,5 +18,6 @@ backward_speed = 70
 angle = 0
 while True:
 	for x in range (181):
-		print "angle: ()".format(angle)
+		print "angle: {}".format(angle)
 		angle = x
+		time.sleep(.5)
