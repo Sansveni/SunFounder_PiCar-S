@@ -17,7 +17,13 @@ forward_speed = 70
 backward_speed = 70
 
 while True:
-	for x in range (180):
-		print "angle: {}".format(x)
-		fw.turn(x)
-		time.sleep(.1)
+#	for x in range (180):
+#		print "angle: {}".format(x)
+#		fw.turn(x)
+#		time.sleep(.5)
+	fw.turn(0)
+	print "angle is 0.\n"
+	fw.turn(90)
+	print "angle is 90.\n"
+	fw.turn(180)
+	print "angle is 180.\n"
