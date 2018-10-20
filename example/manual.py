@@ -53,6 +53,6 @@ while True:
 	else:
 		print "Unrecognized command.\n"
 	
-	if lastCommand-current > .1:
+	if current-lastCommand > .1:
 		bw.stop()
 	# 	time.sleep(.01)
