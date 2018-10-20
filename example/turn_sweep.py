@@ -23,7 +23,12 @@ while True:
 #		time.sleep(.5)
 	fw.turn(0)
 	print "angle is 0.\n"
+	time.sleep(1)
 	fw.turn(90)
 	print "angle is 90.\n"
+	time.sleep(1)
+
 	fw.turn(180)
 	print "angle is 180.\n"
+	time.sleep(1)
+
