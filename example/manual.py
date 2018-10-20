@@ -61,7 +61,7 @@ while True:
 			turn_angle = 90
 		elif(turn_angle<180): #if not full right, set to full right
 			turn_angle =180
-		bw.forward(turn_angle)
+		fw.turn(turn_angle)
 		lastCommand = timer()
 	elif uinput=='a':
 #		if(turn_angle>0):
@@ -71,7 +71,7 @@ while True:
 			turn_angle =90
 		elif(turn_angle>0):
 			turn_angle=0
-		bw.forward(turn_angle)			
+		fw.turn(turn_angle)			
 		lastCommand = timer()
 
 	else:
