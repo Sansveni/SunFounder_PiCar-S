@@ -109,7 +109,7 @@ while True:
 		if speed <100:
 			speed+=1
 			print "increasing speed to {}".format(speed)
-		else
+		else:
 			print "already at max speed of {}".format(speed)
 	else:
 		print "Unrecognized command.\n"
