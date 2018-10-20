@@ -106,11 +106,17 @@ while True:
 		lastCommand = timer()
 
 	elif uinput =='r':
-		if speed <100:
+		if speed < 100:
 			speed+=1
 			print "increasing speed to {}".format(speed)
 		else:
 			print "already at max speed of {}".format(speed)
+	elif uinput =='f':
+		if speed > 2:
+			speed -=1
+			print "decreasing speed to {}".format(speed)
+		else:
+			print "already at lowest nonstopped speed of {}".format(speed)
 	else:
 		print "Unrecognized command.\n"
 	
