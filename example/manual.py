@@ -54,14 +54,22 @@ while True:
 		bw.speed = backward_speed
 		lastCommand = timer()
 	elif uinput=='d':
-		if(turn_angle < 110):
-			turn_angle+=1
-		fw.turn(turn_angle)
+#		if(turn_angle < 180):
+#			turn_angle+=1
+#		fw.turn(turn_angle)
+		if(turn_angle<90) #if going leftwards at any degree, set to straight
+			turn_angle = 90
+		elif(turn_angle<180) #if not full right, set to full right
+			turn_angle =180
 		lastCommand = timer()
 	elif uinput=='a':
-		if(turn_angle>70):
-			turn_angle-=1
-		fw.turn(turn_angle)
+#		if(turn_angle>0):
+#			turn_angle-=1
+#		fw.turn(turn_angle)
+		if(turn_angle>90)
+			turn_angle =90
+		elif(turn_angle>0)
+			turn_angle=0
 		lastCommand = timer()
 
 	else:
