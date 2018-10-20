@@ -1,5 +1,6 @@
 from picar import front_wheels
 from picar import back_wheels
+from timeit import default_timer as timer
 import time
 import picar
 import random
