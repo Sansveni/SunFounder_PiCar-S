@@ -41,8 +41,7 @@ def exitFunc():
 print "Type q to quit\n"
 atexit.register(exitFunc)
 
-forward_speed = 70
-backward_speed = 70
+bw.set_speed(100)
 lastCommand = 0
 current = 0
 turn_angle = 0 
@@ -50,37 +49,44 @@ going_forward = False;
 going_backward = False;
 while True:
 	uinput =getch();
+	uinput=uinput.lower();
 	current = timer()
 	
 
 	print "current: {}".format(current)
+	
 	if uinput=='q':
 		exit()
+		
 	elif uinput=='w':
 		if going_backward == True:
+			print "Stopping"
 			bw.stop()
 			going_backward = False;
 		else:
 			bw.forward()
-			bw.speed = forward_speed
 			going_forward = True
 		lastCommand = timer()
+		
 	elif uinput=='s':
 		if going_forward == True:
+			print "Stopping"
 			bw.stop()
 			going_forward = False;
 		else:
 			bw.backward()
-			bw.speed = backward_speed
 			going_backward = True
 		lastCommand = timer()
+		
 	elif uinput=='d':
 #		if(turn_angle < 180):
 #			turn_angle+=1
 #		fw.turn(turn_angle)
 		if(turn_angle<90): #if going leftwards at any degree, set to straight
+			print "Going straight"
 			turn_angle = 90
 		elif(turn_angle<180): #if not full right, set to full right
+			print "Turning right"
 			turn_angle =180
 		fw.turn(turn_angle)
 		lastCommand = timer()
@@ -89,17 +95,25 @@ while True:
 #			turn_angle-=1
 #		fw.turn(turn_angle)
 		if(turn_angle>90):
+			print "Going straight"
 			turn_angle =90
 		elif(turn_angle>0):
+			print "Turning left"
 			turn_angle=0
 		fw.turn(turn_angle)			
 		lastCommand = timer()
 
+	elif uinput =='r':
+		forward_speed+=1
+		print "increasing speed to {}".format(forward_speed)
+		
+	elif uinput 
 	else:
 		print "Unrecognized command.\n"
 	
+
 	if current-lastCommand > 0.30:
-		print "Stopping car.\n"
+		print "Stopping"
 		bw.stop()
 	
 	time.sleep(.1)
