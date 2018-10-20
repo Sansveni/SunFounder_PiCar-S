@@ -36,15 +36,21 @@ backward_speed = 70
 
 while True:
 	uinput =getch();
+	lastCommand = timer()
+	current = timer()
+	if start-current > .1:
+		bw.stop()
 	if uinput=='q':
 		exit()
 	elif uinput=='w':
 		bw.forward()
 		bw.speed = forward_speed
+		lastCommand = timer()
 	elif uinput=='s':
 		bw.backward()
 		bw.speed = backward_speed
+		lastCommand = timer()
 	else:
-		bw.stop()
+		print "Unrecognized command.\n"
 	time.sleep(.01)
 	bw.stop()
