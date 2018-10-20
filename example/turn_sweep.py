@@ -15,9 +15,9 @@ bw = back_wheels.Back_Wheels(db='config')
 
 forward_speed = 70
 backward_speed = 70
-angle = 0
+
 while True:
-	for x in range (181):
-		print "angle: {}".format(angle)
+	for x in range (180):
+		print "angle: {}".format(x)
 		fw.turn(x)
 		time.sleep(.5)
