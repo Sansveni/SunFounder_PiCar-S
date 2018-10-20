@@ -52,6 +52,11 @@ while True:
 		lastCommand = timer()
 	elif uinput=='d':
 		fw.turn(1)
+		lastCommand = timer()
+	elif uinput=='a':
+		fw.turn(1)
+		lastCommand = timer()
+
 	else:
 		print "Unrecognized command.\n"
 	
