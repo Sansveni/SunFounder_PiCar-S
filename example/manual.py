@@ -41,7 +41,7 @@ def exitFunc():
 print "Type q to quit\n"
 atexit.register(exitFunc)
 
-forward_speed = 100
+forward_speed = 70
 backward_speed = 70
 lastCommand = 0
 current = 0
