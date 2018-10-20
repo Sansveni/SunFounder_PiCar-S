@@ -39,6 +39,8 @@ def exitFunc():
 	
 
 print "Type q to quit\n"
+atexit.register(exitFunc)
+
 forward_speed = 70
 backward_speed = 70
 lastCommand = 0
@@ -49,7 +51,6 @@ going_backward = False;
 while True:
 	uinput =getch();
 	current = timer()
-	atexit.register(exitFunc())
 	
 
 	print "current: {}".format(current)
