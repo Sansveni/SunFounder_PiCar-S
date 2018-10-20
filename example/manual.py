@@ -34,12 +34,12 @@ getch = _GetchUnix()
 print "Type q to quit\n"
 forward_speed = 70
 backward_speed = 70
-
+lastCommand = 0
+current = 0
 while True:
 	uinput =getch();
 	current = timer()
-	if lastCommand-current > .1:
-		bw.stop()
+
 	if uinput=='q':
 		exit()
 	elif uinput=='w':
@@ -52,4 +52,7 @@ while True:
 		lastCommand = timer()
 	else:
 		print "Unrecognized command.\n"
+	
+	if lastCommand-current > .1:
+		bw.stop()
 	# 	time.sleep(.01)
