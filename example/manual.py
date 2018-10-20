@@ -27,7 +27,7 @@ class _GetchUnix:
         finally:
             termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
         return ch
-getch = _Getch()
+getch = _GetchUnix()
 
 while True:
 	uinput =getch();
