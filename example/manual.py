@@ -39,7 +39,7 @@ current = 0
 while True:
 	uinput =getch();
 	current = timer()
-
+	print "current: {}".format(current)
 	if uinput=='q':
 		exit()
 	elif uinput=='w':
@@ -56,4 +56,5 @@ while True:
 	if current-lastCommand > .1:
 		print "Stopping car.\n"
 		bw.stop()
+	
 	# 	time.sleep(.01)
