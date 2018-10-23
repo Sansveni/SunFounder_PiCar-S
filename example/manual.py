@@ -40,8 +40,8 @@ def exitFunc():
 
 print """Welcome to the PiCar Manual Control Program by Charlie Didear\n
 Instructions:\n
-WASD to move. W=forward, S=backward, A=turn left, D=turn right.\
-RF to set speed setting. R=increase speed, F=decrease speed.  Note they do
+WASD to move. W=forward, S=backward, A=turn left, D=turn right.\n
+RF to set speed setting. R=increase speed, F=decrease speed.  Note R and F do
  not change direction, only how fast you are going if you're going forward/backward.
  Q= quit.  NOTE THAT YOU CAN ONLY QUIT BY PRESSING Q."""
 atexit.register(exitFunc)
@@ -66,6 +66,7 @@ while True:
 			bw.stop()
 			going_backward = False;
 		else:
+			print "Going forward"
 			bw.forward()
 			bw.speed = speed
 			going_forward = True
@@ -77,6 +78,7 @@ while True:
 			bw.stop()
 			going_forward = False;
 		else:
+			print "Going backward"
 			bw.backward()
 			bw.speed = speed
 			going_backward = True
