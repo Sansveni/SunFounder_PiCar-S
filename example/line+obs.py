@@ -98,6 +98,8 @@ def main():
 			bw.stop()
 		#else if no obstruction, track line
 		else:
+			bw.forward()
+			bw.speed = forward_speed
 			lt_status_now = lf.read_digital()
 			print lt_status_now
 			# Angle calculate
